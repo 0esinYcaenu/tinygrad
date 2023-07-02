@@ -1,0 +1,32 @@
+# Dumbassembly08zip: A Smartassembly Decompiler
+ 
+Dumbassembly08zip is a tool that can decompile .NET binaries that are obfuscated by Smartassembly, a protection software by Redgate. It was originally created by arc\_ but was uploaded to GitHub by huds0nx[^1^] because he couldn't find it anywhere else. Dumbassembly08zip can reverse the various layers of obfuscation that Smartassembly applies, such as string encryption, imported method hiding, control flow obfuscation, and resource encryption.
+ 
+Dumbassembly08zip works by performing a series of deobfuscation passes on the encrypted and compressed data that Smartassembly stores in the binary as a resource stream. It identifies the next layer to remove by a 4-byte header that is prepended to the data. For example, "z\0x02" means decrypt the data using DES, and "z\0x01" means decompress the data using raw inflate. After removing all the layers, Dumbassembly08zip can access the base64 block that contains all the string literals. It can also restore the original imported methods by analyzing the delegates that Smartassembly sets up at runtime. Finally, it can undo the control flow obfuscation by moving back the code sequences that were spliced to the end of the function.
+ 
+**Download ✸ [https://www.google.com/url?q=https%3A%2F%2Fbltlly.com%2F2uyfSp&sa=D&sntz=1&usg=AOvVaw1kP0WoP9OBpmAhaVFbrl08](https://www.google.com/url?q=https%3A%2F%2Fbltlly.com%2F2uyfSp&sa=D&sntz=1&usg=AOvVaw1kP0WoP9OBpmAhaVFbrl08)**
+
+
+ 
+Dumbassembly08zip is not a complete solution for decompiling Smartassembly-protected binaries. It does not recover the original names of non-public namespaces, classes, methods and fields, which are replaced by junk by Smartassembly. It also does not decrypt the resources that are encrypted using a different algorithm than DES. However, it is still a useful tool for understanding how Smartassembly works and how to defeat it.
+  
+## How to use Dumbassembly08zip
+ 
+To use Dumbassembly08zip, you need to have a .NET binary that is protected by Smartassembly. You can download Dumbassembly08zip from GitHub[^1^] and extract the zip file to a folder. Then, you can run dumbassembly.exe and select the input file and the output folder. Dumbassembly08zip will then start to decompile the binary and produce a new file with the suffix "\_deobfuscated".
+ 
+The decompiled file will have all the string literals restored, all the imported methods visible, and all the control flow obfuscation removed. You can then use any .NET decompiler, such as ILSpy or dnSpy, to view the source code of the decompiled file. You can also compare the original and decompiled files using a hex editor or a diff tool to see the differences.
+ 
+## Limitations and alternatives of Dumbassembly08zip
+ 
+Dumbassembly08zip is not a perfect tool for decompiling Smartassembly-protected binaries. It has some limitations and drawbacks that you should be aware of. For example:
+ 
+- It does not recover the original names of non-public namespaces, classes, methods and fields, which are replaced by junk by Smartassembly. This makes the source code harder to read and understand.
+- It does not decrypt the resources that are encrypted using a different algorithm than DES. This means that some resources, such as images or sounds, may not be accessible.
+- It does not support some newer versions or features of Smartassembly, such as generics obfuscation or tamper protection. This means that some binaries may not be decompilable or may have errors.
+- It is not actively maintained or updated by its original author or its uploader. This means that it may not work with future versions of Smartassembly or .NET.
+
+If you encounter any of these limitations or problems with Dumbassembly08zip, you may want to look for some alternatives. There are other tools that can decompile Smartassembly-protected binaries, such as de4dot or SimpleAssemblyExplorer. However, these tools may also have their own limitations and drawbacks, so you should always do your own research and testing before using them.
+ 
+How to decompile smartassembly with dumbassembly,  Dumbassembly GitHub repository by huds0nx,  Dumbassembly vs dumbassembler: which one is better?,  Dumbassembly tutorial: how to use it for .NET protections,  Dumbassembly download link and installation guide,  Dumbassembly features and limitations,  Dumbassembly alternatives and competitors,  Dumbassembly reviews and ratings,  Dumbassembly license and pricing,  Dumbassembly support and documentation,  Dumbassembly updates and changelog,  Dumbassembly source code and contribution,  Dumbassembly string encryption and decryption,  Dumbassembly resource assembly loading,  Dumbassembly control flow obfuscation removal,  Dumbassembly delegate call replacement,  Dumbassembly name mangling and demangling,  Dumbassembly UTF-8 and base64 encoding,  Dumbassembly DES encryption and compression,  Dumbassembly metadata token manipulation,  Dumbassembly resource stream extraction,  Dumbassembly inflate and deflate algorithms,  Dumbassembly static field delegate injection,  Dumbassembly ldstr instruction substitution,  Dumbassembly ResourceManager instantiation,  How to use dumbassembler with dumbassembly,  What is dumbassembler and how does it work?,  Dumbassembler GitHub repository by heypoom,  Dumbassembler tutorial: how to use it for assembly instructions,  Dumbassembler API and integration with Amazon Mechanical Turk,  Dumbassembler features and limitations,  Dumbassembler alternatives and competitors,  Dumbassembler reviews and ratings,  Dumbassembler license and pricing,  Dumbassembler support and documentation,  Dumbassembler updates and changelog,  Dumbassembler source code and contribution,  Dumbassembler CPU instructions and arithmetic operations,  Dumbassembler human workers and performance,  Dumbassembler MTurk API usage and cost,  How to combine dumbassembly and dumbassembler for maximum efficiency,  How to optimize dumbassembly for speed and accuracy,  How to optimize dumbassembler for cost and reliability,  How to troubleshoot dumbassembly errors and issues,  How to troubleshoot dumbassembler errors and issues,  How to compare dumbassembly with other smartassembly decompilers,  How to compare dumbassembler with other assembly emulators,  How to learn more about dumbassembly internals and algorithms,  How to learn more about dumbassembler internals and algorithms,  How to contact dumbassembly developers and contributors
+ 8cf37b1e13
+ 
